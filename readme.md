@@ -22,3 +22,11 @@ $repo->commit('Some commit message');
 $repo->push('origin', 'master');
 ```
 
+## Window server basic pull
+```php
+require_once('Git.php');
+
+$repo = Git::open('C:\Xampp\htdocs\demo_git');  // -or- Git::create('/path/to/repo')
+Git::set_bin('"C:\Program Files\Git\bin\git"');
+$repo->pull('https://github.com/..../.git', 'master');
+```
